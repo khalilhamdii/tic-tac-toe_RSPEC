@@ -2,7 +2,7 @@
 require_relative '../lib/player'
 require_relative '../lib/board'
 
-def validate_name(_num)
+def validate_name
   validated = false
   until validated
     name = gets.chomp
@@ -13,9 +13,9 @@ end
 
 def get_player_names(player1, player2)
   puts 'Player 1 please enter name : '
-  player1.name = validate_name(1)
+  player1.name = validate_name
   puts 'Player 2 please enter name : '
-  player2.name = validate_name(2)
+  player2.name = validate_name
   player2.name = "#{player2.name}2" if player2.name == player1.name
   puts "Welcome #{player1.name} and #{player2.name}"
 end
