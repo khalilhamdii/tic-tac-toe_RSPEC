@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# rubocop:disable Metrics/MethodLength
 require_relative '../lib/player'
 require_relative '../lib/board'
 
@@ -64,6 +65,7 @@ def play_game(game_board, player1, player2)
     puts "#{player1.name} please make your move :"
     position = validate(game_board)
     puts game_board.update_position(position, player1.token)
+    puts game_board.display
     if game_board.test_win(player1.token)
       puts "#{player1.name} WINS"
       break
@@ -77,6 +79,7 @@ def play_game(game_board, player1, player2)
     puts "#{player2.name} please make your move :"
     position = validate(game_board)
     puts game_board.update_position(position, player2.token)
+    puts game_board.display
     if game_board.test_win(player2.token)
       puts "#{player2.name} WINS"
       break
@@ -95,3 +98,5 @@ game_board = Board.new
 start_game(game_board)
 
 play_game(game_board, player1, player2)
+
+# rubocop:enable Metrics/MethodLength

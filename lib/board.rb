@@ -44,7 +44,7 @@ class Board
     @board[2][1] = token if val == 8
     @board[2][2] = token if val == 9
     @tokens += 1
-    display
+    @board
   end
 
   def test_win(token)
