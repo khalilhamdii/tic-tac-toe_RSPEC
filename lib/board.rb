@@ -1,4 +1,4 @@
-# rubocop:disable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity,Metrics/AbcSize
+# rubocop:disable Metrics/AbcSize
 
 class Board
   attr_accessor :board
@@ -44,7 +44,7 @@ class Board
     @board[2][1] = token if val == 8
     @board[2][2] = token if val == 9
     @tokens += 1
-    display
+    @board
   end
 
   def test_win(token)
@@ -70,4 +70,4 @@ class Board
   end
 end
 
-# rubocop:enable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity,Metrics/AbcSize
+# rubocop:enable Metrics/AbcSize
