@@ -51,7 +51,7 @@ describe Board do
     end
 
     it 'Should not update the board with the given token when the position is not in the range of 1..9' do
-      expect(game_board1.update_position(14, 'X')).not_to eql(test_board1)
+      expect(game_board1.update_position(14, 'X')).to eql(test_board1)
     end
   end
 
