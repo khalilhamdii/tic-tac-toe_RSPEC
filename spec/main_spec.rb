@@ -1,8 +1,8 @@
-# spec/testing.rb
+# spec/main_spec.rb
 
-require 'require_all'
-require_all './lib'
-require_all './bin'
+require_relative '../lib/player.rb'
+require_relative '../lib/board.rb'
+
 
 describe Player.new('khalil', 'X') do
   it { is_expected.to have_attributes(name: 'khalil') }
